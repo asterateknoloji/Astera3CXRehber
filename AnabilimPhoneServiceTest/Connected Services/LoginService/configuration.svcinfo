@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;BasicHttpBinding_IK12NETLoginService&quot; /&gt;" bindingType="basicHttpBinding" name="BasicHttpBinding_IK12NETLoginService" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://okul.k12net.com/K12NETDataService/K12NETLoginService.svc&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;BasicHttpBinding_IK12NETLoginService&quot; contract=&quot;LoginService.IK12NETLoginService&quot; name=&quot;BasicHttpBinding_IK12NETLoginService&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://okul.k12net.com/K12NETDataService/K12NETLoginService.svc&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;BasicHttpBinding_IK12NETLoginService&quot; contract=&quot;LoginService.IK12NETLoginService&quot; name=&quot;BasicHttpBinding_IK12NETLoginService&quot; /&gt;" contractName="LoginService.IK12NETLoginService" name="BasicHttpBinding_IK12NETLoginService" />
+  </endpoints>
+</configurationSnapshot>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="40a61dfe-ebd9-4842-99b0-957333ad6cf1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://okul.k12net.com/K12NETDataService/K12NETLoginService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="K12NETLoginService.wsdl" MetadataType="Wsdl" ID="2b162f68-9941-493d-a61a-645b89894bc8" SourceId="1" SourceUrl="https://okul.k12net.com/K12NETDataService/K12NETLoginService.svc?wsdl" />
+    <MetadataFile FileName="K12NETLoginService.xsd" MetadataType="Schema" ID="104dd913-a6f1-435c-a881-b0fd3ee2b81a" SourceId="1" SourceUrl="https://okul.k12net.com/K12NETDataService/K12NETLoginService.svc?xsd=xsd1" />
+    <MetadataFile FileName="K12NETLoginService.disco" MetadataType="Disco" ID="0f97a3c8-b4c2-4f54-8e15-66c74cb699ad" SourceId="1" SourceUrl="https://okul.k12net.com/K12NETDataService/K12NETLoginService.svc?disco" />
+    <MetadataFile FileName="K12NETLoginService1.xsd" MetadataType="Schema" ID="40de6641-2bc1-49ba-ba39-9ebfce32f624" SourceId="1" SourceUrl="https://okul.k12net.com/K12NETDataService/K12NETLoginService.svc?xsd=xsd0" />
+    <MetadataFile FileName="K12NETLoginService2.xsd" MetadataType="Schema" ID="b32051f9-cb17-4126-9749-41651e684f09" SourceId="1" SourceUrl="https://okul.k12net.com/K12NETDataService/K12NETLoginService.svc?xsd=xsd3" />
+    <MetadataFile FileName="K12NETLoginService3.xsd" MetadataType="Schema" ID="572c2591-be4c-4578-9ef6-94302d96489a" SourceId="1" SourceUrl="https://okul.k12net.com/K12NETDataService/K12NETLoginService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

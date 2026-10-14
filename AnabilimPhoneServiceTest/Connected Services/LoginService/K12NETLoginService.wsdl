@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="K12NETLoginService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://okul.k12net.com/K12NETDataService/K12NETLoginService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://okul.k12net.com/K12NETDataService/K12NETLoginService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://okul.k12net.com/K12NETDataService/K12NETLoginService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/K12NETDataService" />
+      <xsd:import schemaLocation="http://okul.k12net.com/K12NETDataService/K12NETLoginService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IK12NETLoginService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETLoginService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETLoginService_SSO_InputMessage">
+    <wsdl:part name="parameters" element="tns:SSO" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETLoginService_SSO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SSOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETLoginService_SinavLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:SinavLogin" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETLoginService_SinavLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SinavLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETLoginService_GetPersonalDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonalDetails" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETLoginService_GetPersonalDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonalDetailsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IK12NETLoginService">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETLoginService/Login" message="tns:IK12NETLoginService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETLoginService/LoginResponse" message="tns:IK12NETLoginService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SSO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETLoginService/SSO" message="tns:IK12NETLoginService_SSO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETLoginService/SSOResponse" message="tns:IK12NETLoginService_SSO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SinavLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETLoginService/SinavLogin" message="tns:IK12NETLoginService_SinavLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETLoginService/SinavLoginResponse" message="tns:IK12NETLoginService_SinavLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonalDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETLoginService/GetPersonalDetails" message="tns:IK12NETLoginService_GetPersonalDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETLoginService/GetPersonalDetailsResponse" message="tns:IK12NETLoginService_GetPersonalDetails_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IK12NETLoginService" type="tns:IK12NETLoginService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IK12NETLoginService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSO">
+      <soap:operation soapAction="http://tempuri.org/IK12NETLoginService/SSO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SinavLogin">
+      <soap:operation soapAction="http://tempuri.org/IK12NETLoginService/SinavLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonalDetails">
+      <soap:operation soapAction="http://tempuri.org/IK12NETLoginService/GetPersonalDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="K12NETLoginService">
+    <wsdl:port name="BasicHttpBinding_IK12NETLoginService" binding="tns:BasicHttpBinding_IK12NETLoginService">
+      <soap:address location="http://okul.k12net.com/K12NETDataService/K12NETLoginService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

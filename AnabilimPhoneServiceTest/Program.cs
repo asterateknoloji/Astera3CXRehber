@@ -28,7 +28,9 @@ namespace AnabilimPhoneServiceTest
                 var endpointAddress = new EndpointAddress("https://okul.k12net.com/K12NETDataService/K12NETLoginService.svc");
                 var dataendpointAddress = new EndpointAddress("https://okul.k12net.com/K12NETDataService/K12NETDataService.svc");
                 var client = new LoginService.K12NETLoginServiceClient(binding, endpointAddress);
-                var authCookie = client.Login("b_nh3As6", "cd8+A+A_s");
+                var k12User = ConfigurationManager.AppSettings["K12User"];
+                var k12Password = ConfigurationManager.AppSettings["K12Password"];
+                var authCookie = client.Login(k12User, k12Password);
                 var logMessage = "Login Servisine Bağlandı";
                 Console.WriteLine(logMessage);
                 Logyaz(logMessage);
@@ -38,6 +40,8 @@ namespace AnabilimPhoneServiceTest
                 var connstr = ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString;
                 var pbxIp = ConfigurationManager.AppSettings["PbxIp"];
                 var pbxPort = ConfigurationManager.AppSettings["PbxPort"];
+                var pbxUser = ConfigurationManager.AppSettings["PbxUser"];
+                var pbxPassword = ConfigurationManager.AppSettings["PbxPassword"];
                 var contactYear = ConfigurationManager.AppSettings["ContactYear"];
                 var staffYear = ConfigurationManager.AppSettings["StaffYear"];
                 using (MySqlConnection conn = new MySqlConnection(connstr))
@@ -205,7 +209,11 @@ namespace AnabilimPhoneServiceTest
                                         mysqlCommand.Parameters.AddWithValue("KISAKOD", code);
                                         mysqlCommand.Parameters.AddWithValue("Firma", $"{name}-{lastName} Personel");
                                         mysqlCommand.ExecuteNonQuery();
-                                        var manager = new ManagerConnection(pbxIp, int.Parse(pbxPort), "astera", "astera2012");
+                                        var manager = new ManagerConnection(
+                                            pbxIp,
+                                            int.Parse(pbxPort),
+                                            pbxUser,
+                                            pbxPassword);
                                         manager.FireAllEvents = false;
                                         manager.Login();
                                         CommandAction commandAction = new CommandAction();
@@ -242,6 +250,8 @@ namespace AnabilimPhoneServiceTest
                         SyncStudentAliasesToAsterisk(
                             pbxIp,
                             int.Parse(pbxPort),
+                            pbxUser,
+                            pbxPassword,
                             studentNamesByPhone,
                             speedDials);
 
@@ -426,13 +436,16 @@ namespace AnabilimPhoneServiceTest
         private static void SyncStudentAliasesToAsterisk(
             string pbxIp,
             int pbxPort,
+            string pbxUser,
+            string pbxPassword,
             Dictionary<string, HashSet<string>> studentNamesByPhone,
             Dictionary<string, string> speedDials)
         {
             if (studentNamesByPhone.Count == 0 && speedDials.Count == 0)
                 return;
 
-            var manager = new ManagerConnection(pbxIp, pbxPort, "astera", "astera2012");
+            var manager = new ManagerConnection(
+                pbxIp, pbxPort, pbxUser, pbxPassword);
             manager.FireAllEvents = false;
 
             try

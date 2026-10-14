@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/K12NETDataService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/K12NETDataService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://okul.k12net.com/K12NETDataService/K12NETLoginService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="SinavLoginResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GradeLevels" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Homerooms" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsValidated" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="JobFunctions" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Schools" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="TeachingAssignments" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SinavLoginResult" nillable="true" type="tns:SinavLoginResult" />
+  <xs:complexType name="PersonalDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GradeLevels" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Homerooms" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsValidated" type="xs:boolean" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="JobFunctions" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Schools" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element minOccurs="0" name="TeachingAssignments" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalDetails" nillable="true" type="tns:PersonalDetails" />
+</xs:schema>

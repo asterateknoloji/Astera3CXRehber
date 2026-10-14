@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="K12NETDataService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://okul.k12net.com/K12NETDataService/K12NETDataService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://okul.k12net.com/K12NETDataService/K12NETDataService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://okul.k12net.com/K12NETDataService/K12NETDataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/K12NETDataService" />
+      <xsd:import schemaLocation="http://okul.k12net.com/K12NETDataService/K12NETDataService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IK12NETService_GetStudents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudents" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStudents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudent" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContact" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetContactsByStudentID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactsByStudentID" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetContactsByStudentID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactsByStudentIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetContactsByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactsByID" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetContactsByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStudentsByParameter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentsByParameter" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStudentsByParameter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentsByParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContacts" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStaffs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffs" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStaffs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetAuthorizedSchools_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedSchools" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetAuthorizedSchools_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedSchoolsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStudentSummaryInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentSummaryInfo" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStudentSummaryInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentSummaryInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStudentInfoByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentInfoByID" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStudentInfoByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentInfoByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStudentInfoByPersonID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentInfoByPersonID" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStudentInfoByPersonID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentInfoByPersonIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStaffInfoByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffInfoByID" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStaffInfoByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffInfoByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStaffInfosByPersonID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffInfosByPersonID" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStaffInfosByPersonID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaffInfosByPersonIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_CreateStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateStudent" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_CreateStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_CreateAndUpdateEnrollment_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAndUpdateEnrollment" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_CreateAndUpdateEnrollment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAndUpdateEnrollmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStudentSectionInfos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentSectionInfos" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetStudentSectionInfos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentSectionInfosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetSectionInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSectionInfo" />
+  </wsdl:message>
+  <wsdl:message name="IK12NETService_GetSectionInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSectionInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IK12NETService">
+    <wsdl:operation name="GetStudents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetStudents" message="tns:IK12NETService_GetStudents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetStudentsResponse" message="tns:IK12NETService_GetStudents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetStudent" message="tns:IK12NETService_GetStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetStudentResponse" message="tns:IK12NETService_GetStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetContact" message="tns:IK12NETService_GetContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetContactResponse" message="tns:IK12NETService_GetContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContactsByStudentID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetContactsByStudentID" message="tns:IK12NETService_GetContactsByStudentID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetContactsByStudentIDResponse" message="tns:IK12NETService_GetContactsByStudentID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContactsByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetContactsByID" message="tns:IK12NETService_GetContactsByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetContactsByIDResponse" message="tns:IK12NETService_GetContactsByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentsByParameter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetStudentsByParameter" message="tns:IK12NETService_GetStudentsByParameter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetStudentsByParameterResponse" message="tns:IK12NETService_GetStudentsByParameter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetContacts" message="tns:IK12NETService_GetContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetContactsResponse" message="tns:IK12NETService_GetContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetStaffs" message="tns:IK12NETService_GetStaffs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetStaffsResponse" message="tns:IK12NETService_GetStaffs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedSchools">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetAuthorizedSchools" message="tns:IK12NETService_GetAuthorizedSchools_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetAuthorizedSchoolsResponse" message="tns:IK12NETService_GetAuthorizedSchools_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentSummaryInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetStudentSummaryInfo" message="tns:IK12NETService_GetStudentSummaryInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetStudentSummaryInfoResponse" message="tns:IK12NETService_GetStudentSummaryInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentInfoByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetStudentInfoByID" message="tns:IK12NETService_GetStudentInfoByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetStudentInfoByIDResponse" message="tns:IK12NETService_GetStudentInfoByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentInfoByPersonID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetStudentInfoByPersonID" message="tns:IK12NETService_GetStudentInfoByPersonID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetStudentInfoByPersonIDResponse" message="tns:IK12NETService_GetStudentInfoByPersonID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffInfoByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetStaffInfoByID" message="tns:IK12NETService_GetStaffInfoByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetStaffInfoByIDResponse" message="tns:IK12NETService_GetStaffInfoByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffInfosByPersonID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetStaffInfosByPersonID" message="tns:IK12NETService_GetStaffInfosByPersonID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetStaffInfosByPersonIDResponse" message="tns:IK12NETService_GetStaffInfosByPersonID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/CreateStudent" message="tns:IK12NETService_CreateStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/CreateStudentResponse" message="tns:IK12NETService_CreateStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAndUpdateEnrollment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/CreateAndUpdateEnrollment" message="tns:IK12NETService_CreateAndUpdateEnrollment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/CreateAndUpdateEnrollmentResponse" message="tns:IK12NETService_CreateAndUpdateEnrollment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentSectionInfos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetStudentSectionInfos" message="tns:IK12NETService_GetStudentSectionInfos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetStudentSectionInfosResponse" message="tns:IK12NETService_GetStudentSectionInfos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetUserInfo" message="tns:IK12NETService_GetUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetUserInfoResponse" message="tns:IK12NETService_GetUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSectionInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IK12NETService/GetSectionInfo" message="tns:IK12NETService_GetSectionInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IK12NETService/GetSectionInfoResponse" message="tns:IK12NETService_GetSectionInfo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IK12NETService" type="tns:IK12NETService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStudents">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetStudents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudent">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContact">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContactsByStudentID">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetContactsByStudentID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContactsByID">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetContactsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentsByParameter">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetStudentsByParameter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContacts">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffs">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetStaffs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedSchools">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetAuthorizedSchools" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentSummaryInfo">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetStudentSummaryInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentInfoByID">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetStudentInfoByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentInfoByPersonID">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetStudentInfoByPersonID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffInfoByID">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetStaffInfoByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStaffInfosByPersonID">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetStaffInfosByPersonID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateStudent">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/CreateStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAndUpdateEnrollment">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/CreateAndUpdateEnrollment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentSectionInfos">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetStudentSectionInfos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSectionInfo">
+      <soap:operation soapAction="http://tempuri.org/IK12NETService/GetSectionInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="K12NETDataService">
+    <wsdl:port name="BasicHttpBinding_IK12NETService" binding="tns:BasicHttpBinding_IK12NETService">
+      <soap:address location="http://okul.k12net.com/K12NETDataService/K12NETDataService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

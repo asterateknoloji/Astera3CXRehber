@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnabilimPhoneServiceTest", "AnabilimPhoneServiceTest\AnabilimPhoneServiceTest.csproj", "{079304C4-3FEB-42F2-A9F9-DAB18B13B915}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{079304C4-3FEB-42F2-A9F9-DAB18B13B915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{079304C4-3FEB-42F2-A9F9-DAB18B13B915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{079304C4-3FEB-42F2-A9F9-DAB18B13B915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{079304C4-3FEB-42F2-A9F9-DAB18B13B915}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8749C8A5-054E-4145-A403-74CF615A2016}
+	EndGlobalSection
+EndGlobal

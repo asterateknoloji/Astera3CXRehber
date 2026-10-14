@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<startup>
+		<supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7" />
+	</startup>
+	<system.serviceModel>
+		<bindings>
+			<basicHttpBinding>
+				<binding name="BasicHttpBinding_IK12NETLoginService" />
+				<binding name="BasicHttpBinding_IK12NETService" />
+			</basicHttpBinding>
+		</bindings>
+		<client>
+			<endpoint address="https://okul.k12net.com/K12NETDataService/K12NETLoginService.svc" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IK12NETLoginService" contract="LoginService.IK12NETLoginService" name="BasicHttpBinding_IK12NETLoginService" />
+			<endpoint address="https://okul.k12net.com/K12NETDataService/K12NETDataService.svc" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IK12NETService" contract="DataService.IK12NETService" name="BasicHttpBinding_IK12NETService" />
+		</client>
+	</system.serviceModel>
+	<runtime>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly>
+				<assemblyIdentity name="System.Runtime.CompilerServices.Unsafe" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Memory" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-4.0.1.2" newVersion="4.0.1.2" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Diagnostics.DiagnosticSource" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-7.0.0.2" newVersion="7.0.0.2" />
+			</dependentAssembly>
+		</assemblyBinding>
+	</runtime>
+	<connectionStrings>
+		<add name="MySQL" connectionString="server=MYSQL_HOST;user=MYSQL_USER;database=asteriskcdrdb;password=MYSQL_PASSWORD;charset=utf8;" />
+	</connectionStrings>
+	<appSettings>
+		<add key="K12User" value="K12_USER" />
+		<add key="K12Password" value="K12_PASSWORD" />
+		<add key="PbxIp" value="PBX_HOST" />
+		<add key="PbxPort" value="5038" />
+		<add key="PbxUser" value="PBX_USER" />
+		<add key="PbxPassword" value="PBX_PASSWORD" />
+		<add key="ContactYear" value="2027" />
+		<add key="StaffYear" value="2027" />
+	</appSettings>
+</configuration>

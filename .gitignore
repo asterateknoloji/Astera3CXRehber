@@ -1,0 +1,12 @@
+.vs/
+packages/
+**/bin/
+**/obj/
+**/publish/
+*.user
+*.suo
+*.pfx
+*.log
+Log.txt
+App.config
+*.exe.config

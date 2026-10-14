@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/K12NETDataService" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/K12NETDataService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://okul.k12net.com/K12NETDataService/K12NETDataService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://okul.k12net.com/K12NETDataService/K12NETDataService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfStudentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StudentInfo" nillable="true" type="tns:StudentInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStudentInfo" nillable="true" type="tns:ArrayOfStudentInfo" />
+  <xs:complexType name="StudentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressList" nillable="true" type="tns:ArrayOfCustomAddress" />
+      <xs:element minOccurs="0" name="Advisor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdvisorID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="BirthDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BoarderStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Branch" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ContactIDs" nillable="true" type="q1:ArrayOfguid" />
+      <xs:element minOccurs="0" name="Counselor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CounselorID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="CountryOfBirth" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Emails" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="EntryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EntryType" nillable="true" type="tns:ExtendedType" />
+      <xs:element minOccurs="0" name="ExitDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GradeLevel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Homeroom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HomeroomID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocalID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MembershipType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OtherID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumbers" nillable="true" type="tns:ArrayOfPhone" />
+      <xs:element minOccurs="0" name="RFID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SchoolInfoID" type="ser:guid" />
+      <xs:element minOccurs="0" name="SchoolName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SchoolYearID" type="xs:int" />
+      <xs:element minOccurs="0" name="StateOfBirth" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudentID" type="ser:guid" />
+      <xs:element minOccurs="0" name="StudentPicture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StudentInfo" nillable="true" type="tns:StudentInfo" />
+  <xs:complexType name="ArrayOfCustomAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomAddress" nillable="true" type="tns:CustomAddress" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomAddress" nillable="true" type="tns:ArrayOfCustomAddress" />
+  <xs:complexType name="CustomAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApartmentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="County" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateProvince" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StreetName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomAddress" nillable="true" type="tns:CustomAddress" />
+  <xs:complexType name="ExtendedType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OtherCodes" nillable="true" type="tns:ArrayOfCustomCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExtendedType" nillable="true" type="tns:ExtendedType" />
+  <xs:complexType name="ArrayOfCustomCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomCode" nillable="true" type="tns:CustomCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomCode" nillable="true" type="tns:ArrayOfCustomCode" />
+  <xs:complexType name="CustomCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomCode" nillable="true" type="tns:CustomCode" />
+  <xs:complexType name="ArrayOfPhone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Phone" nillable="true" type="tns:Phone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhone" nillable="true" type="tns:ArrayOfPhone" />
+  <xs:complexType name="Phone">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Phone" nillable="true" type="tns:Phone" />
+  <xs:complexType name="ArrayOfContactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactInfo" nillable="true" type="tns:ContactInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContactInfo" nillable="true" type="tns:ArrayOfContactInfo" />
+  <xs:complexType name="ContactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessToRecords" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AddressList" nillable="true" type="tns:ArrayOfCustomAddress" />
+      <xs:element minOccurs="0" name="BirthDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Citizenship" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactID" type="ser:guid" />
+      <xs:element minOccurs="0" name="ContactSequence" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CountryOfBirth" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisciplinaryContact" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EducationalLevel" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Emails" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element minOccurs="0" name="EmergencyContact" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EmployerType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasContract" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasCustody" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDeceased" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSeperated" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JobLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LivesWith" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Occupation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OtherID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentLegalGuardian" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PhoneNumbers" nillable="true" type="tns:ArrayOfPhone" />
+      <xs:element minOccurs="0" name="PickupRights" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PlaceOfBirth" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Poition" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrimaryCareProvider" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ReceiveSMS" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Relationship" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudentID" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactInfo" nillable="true" type="tns:ContactInfo" />
+  <xs:complexType name="ArrayOfStaffInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StaffInfo" nillable="true" type="tns:StaffInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStaffInfo" nillable="true" type="tns:ArrayOfStaffInfo" />
+  <xs:complexType name="StaffInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressList" nillable="true" type="tns:ArrayOfCustomAddress" />
+      <xs:element minOccurs="0" name="BirthDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BirthPlace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CitizenshipStatus" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Citizenships" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element minOccurs="0" name="CountryOfBirth" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Emails" nillable="true" type="q5:ArrayOfstring" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JobEndDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="JobFunction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JobStartDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaritalStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OtherID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumbers" nillable="true" type="tns:ArrayOfPhone" />
+      <xs:element minOccurs="0" name="Picture" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Qualifications" nillable="true" type="tns:ArrayOfStaffQualification" />
+      <xs:element minOccurs="0" name="RFID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StaffPersonalID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StaffInfo" nillable="true" type="tns:StaffInfo" />
+  <xs:complexType name="ArrayOfStaffQualification">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StaffQualification" nillable="true" type="tns:StaffQualification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStaffQualification" nillable="true" type="tns:ArrayOfStaffQualification" />
+  <xs:complexType name="StaffQualification">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryOfInstitution" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InstituteName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgramType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Qualification" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StarDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StaffQualification" nillable="true" type="tns:StaffQualification" />
+  <xs:complexType name="ArrayOfSchool">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="School" nillable="true" type="tns:School" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchool" nillable="true" type="tns:ArrayOfSchool" />
+  <xs:complexType name="School">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="School" nillable="true" type="tns:School" />
+  <xs:complexType name="StudentSummaryInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BirthDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Enrollments" nillable="true" type="tns:ArrayOfEnrollment" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OtherId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumbers" nillable="true" type="tns:ArrayOfPhone" />
+      <xs:element minOccurs="0" name="PictureUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudentContacts" nillable="true" type="tns:ArrayOfStudentContactSummary" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="eMails" nillable="true" type="q6:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StudentSummaryInfo" nillable="true" type="tns:StudentSummaryInfo" />
+  <xs:complexType name="ArrayOfEnrollment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Enrollment" nillable="true" type="tns:Enrollment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEnrollment" nillable="true" type="tns:ArrayOfEnrollment" />
+  <xs:complexType name="Enrollment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EntryType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntryTypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntryTypeOtherCodes" nillable="true" type="tns:ArrayOfCustomCode" />
+      <xs:element minOccurs="0" name="ExitDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GradeLevel" nillable="true" type="tns:GradeLevel" />
+      <xs:element minOccurs="0" name="HomeroomInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HomeroomInfoID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="MembershipType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SchoolID" type="ser:guid" />
+      <xs:element minOccurs="0" name="SchoolName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SchoolYearID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Enrollment" nillable="true" type="tns:Enrollment" />
+  <xs:complexType name="GradeLevel">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Branch" nillable="true" type="q7:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GradeLevel" nillable="true" type="tns:GradeLevel" />
+  <xs:complexType name="ArrayOfStudentContactSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StudentContactSummary" nillable="true" type="tns:StudentContactSummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStudentContactSummary" nillable="true" type="tns:ArrayOfStudentContactSummary" />
+  <xs:complexType name="StudentContactSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessToRecords" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Addresses" nillable="true" type="tns:ArrayOfAddressInfo" />
+      <xs:element minOccurs="0" name="ContactSequence" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DisciplinaryContact" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EmergencyContact" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasCustody" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDeceased" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSeperated" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LivesWith" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OtherId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentLegalGuardian" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PhoneNumbers" nillable="true" type="tns:ArrayOfPhone" />
+      <xs:element minOccurs="0" name="PickupRights" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PrimaryCareProvider" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RelationshipType" nillable="true" type="xs:string" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="eMails" nillable="true" type="q8:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StudentContactSummary" nillable="true" type="tns:StudentContactSummary" />
+  <xs:complexType name="ArrayOfAddressInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AddressInfo" nillable="true" type="tns:AddressInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddressInfo" nillable="true" type="tns:ArrayOfAddressInfo" />
+  <xs:complexType name="AddressInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="District" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateProvince" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddressInfo" nillable="true" type="tns:AddressInfo" />
+  <xs:complexType name="OperationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityID" type="ser:guid" />
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Messages" nillable="true" type="q9:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Result" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResult" nillable="true" type="tns:OperationResult" />
+  <xs:complexType name="ExtendedEnrollmentInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Enrollment">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LocalID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OtherID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StudentID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExtendedEnrollmentInfo" nillable="true" type="tns:ExtendedEnrollmentInfo" />
+  <xs:complexType name="StudentSectionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SectionInfos" nillable="true" type="tns:ArrayOfSectionInfoSummary" />
+      <xs:element minOccurs="0" name="StudentInfo" nillable="true" type="tns:StudentSummaryInfo" />
+      <xs:element minOccurs="0" name="TermInfo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StudentSectionInfo" nillable="true" type="tns:StudentSectionInfo" />
+  <xs:complexType name="ArrayOfSectionInfoSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SectionInfoSummary" nillable="true" type="tns:SectionInfoSummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSectionInfoSummary" nillable="true" type="tns:ArrayOfSectionInfoSummary" />
+  <xs:complexType name="SectionInfoSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CourseCode" nillable="true" type="xs:string" />
+      <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CourseNames" nillable="true" type="q10:ArrayOfKeyValueOfstringstring" />
+      <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Names" nillable="true" type="q11:ArrayOfKeyValueOfstringstring" />
+      <xs:element minOccurs="0" name="PeriodInfos" nillable="true" type="tns:ArrayOfPeriodInfo" />
+      <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RoomInfos" nillable="true" type="q12:ArrayOfstring" />
+      <xs:element minOccurs="0" name="SectionID" type="ser:guid" />
+      <xs:element minOccurs="0" name="TeacherInfos" nillable="true" type="tns:ArrayOfStaffInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SectionInfoSummary" nillable="true" type="tns:SectionInfoSummary" />
+  <xs:complexType name="ArrayOfPeriodInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PeriodInfo" nillable="true" type="tns:PeriodInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPeriodInfo" nillable="true" type="tns:ArrayOfPeriodInfo" />
+  <xs:complexType name="PeriodInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Day" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DayID" type="ser:guid" />
+      <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Period" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PeriodID" type="ser:guid" />
+      <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PeriodInfo" nillable="true" type="tns:PeriodInfo" />
+  <xs:complexType name="UserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Role" type="xs:int" />
+      <xs:element minOccurs="0" name="StudentInfos" nillable="true" type="tns:ArrayOfStudentSummaryInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserInfo" nillable="true" type="tns:UserInfo" />
+  <xs:complexType name="ArrayOfStudentSummaryInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StudentSummaryInfo" nillable="true" type="tns:StudentSummaryInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStudentSummaryInfo" nillable="true" type="tns:ArrayOfStudentSummaryInfo" />
+  <xs:complexType name="ArrayOfSectionHomeroomInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SectionHomeroomInfo" nillable="true" type="tns:SectionHomeroomInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSectionHomeroomInfo" nillable="true" type="tns:ArrayOfSectionHomeroomInfo" />
+  <xs:complexType name="SectionHomeroomInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Branch" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GradeLevel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Homeroom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HomeroomID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Sections" nillable="true" type="tns:ArrayOfSectionScheduleInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SectionHomeroomInfo" nillable="true" type="tns:SectionHomeroomInfo" />
+  <xs:complexType name="ArrayOfSectionScheduleInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SectionScheduleInfo" nillable="true" type="tns:SectionScheduleInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSectionScheduleInfo" nillable="true" type="tns:ArrayOfSectionScheduleInfo" />
+  <xs:complexType name="SectionScheduleInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CourseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CourseID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SectionID" type="ser:guid" />
+      <xs:element minOccurs="0" name="TeacherInfos" nillable="true" type="tns:ArrayOfStaffInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SectionScheduleInfo" nillable="true" type="tns:SectionScheduleInfo" />
+</xs:schema>
